@@ -31,6 +31,8 @@ class Kernel extends HttpKernel
         'checkTokenExists' => \App\Core\Http\Middleware\CheckTokenExists::class,
         'cors' => \Barryvdh\Cors\HandleCors::class,
         'jwt.auth' => \Tymon\JWTAuth\Middleware\GetUserFromToken::class,
-        'jwt.refresh' => \Tymon\JWTAuth\Middleware\RefreshToken::class
+        'jwt.refresh' => \Tymon\JWTAuth\Middleware\RefreshToken::class,
+        'acl' => \App\Http\Middleware\CheckPermission::class,
+
     ];
 }
